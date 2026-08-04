@@ -1,0 +1,22 @@
+# 敏感配置——绝不进仓库（API key 泄露=账户钥匙挂门口）
+config.json
+*.env
+.env*
+
+# 运行产物与日志
+output/
+logs/
+*.log
+state_*.json
+external_signals.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db

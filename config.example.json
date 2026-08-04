@@ -1,0 +1,116 @@
+{
+  "api": {
+    "key": "YOUR_OKX_API_KEY",
+    "secret": "YOUR_OKX_API_SECRET",
+    "passphrase": "YOUR_OKX_PASSPHRASE",
+    "exchange_type": "okx",
+    "testnet": true,
+    "proxy": "http://127.0.0.1:10808"
+  },
+  "trading": {
+    "symbols": [
+      "NVDA/USDT:USDT",
+      "MSFT/USDT:USDT",
+      "GOOGL/USDT:USDT",
+      "TSLA/USDT:USDT",
+      "ORCL/USDT:USDT",
+      "ADBE/USDT:USDT",
+      "PLTR/USDT:USDT",
+      "SPY/USDT:USDT"
+    ],
+    "leverage": 5,
+    "per_symbol_leverage": {
+      "GOOGL/USDT:USDT": 20,
+      "ORCL/USDT:USDT": 20,
+      "PLTR/USDT:USDT": 20
+    },
+    "timeframe": "5m",
+    "scan_batch": 5,
+    "taker_fee_rate": 0.05,
+    "disabled_symbols": []
+  },
+  "risk": {
+    "total_capital": 100,
+    "max_loss_per_trade": 10,
+    "max_daily_loss": 40,
+    "max_positions": 3,
+    "volatility_gate": {
+      "enabled": true,
+      "lookback": 50,
+      "max_atr_ratio": 4.0
+    },
+    "tiered_tp": {
+      "enabled": true,
+      "levels_pct": [0.6, 1.2, 2.2],
+      "split": [0.5, 0.3, 0.2]
+    },
+    "trailing_sl": {
+      "enabled": true,
+      "activation_same_as_be": true,
+      "activation_pct": 0.25,
+      "buffer_atr_mult": 1.2,
+      "buffer_floor_pct": 0.15,
+      "step_pct": 0.1,
+      "move_interval_sec": 30
+    },
+    "breakeven": {
+      "enabled": true,
+      "activation_pct": 0.5,
+      "offset_pct": 0.1
+    },
+    "entry_chop_filter": {
+      "enabled": true,
+      "min_adx": 20,
+      "min_atr_ratio": 0.75,
+      "atr_median_period": 30
+    },
+    "extreme_vol_protection": {
+      "enabled": true,
+      "vol_ratio_threshold": 3.0,
+      "tp_r_multiple": 1.5,
+      "sl_atr_multiple": 2.5,
+      "mid_trade_widen": true
+    },
+    "market_open_blackout": {
+      "enabled": true,
+      "start_offset_min": -5,
+      "end_offset_min": 10,
+      "us_open_hour_utc8": 21,
+      "us_open_min_utc8": 30
+    },
+    "funding_avoidance": {
+      "enabled": true,
+      "interval_hours": 8,
+      "settlement_utc_hours": [0, 8, 16],
+      "avoid_window_min": 60,
+      "block_long": true,
+      "block_short": false
+    }
+  },
+  "strategy": {
+    "breakout_periods": 50,
+    "ema_period": 50,
+    "volume_multiplier": 1.2,
+    "rsi_period": 14,
+    "rsi_overbought": 70,
+    "rsi_oversold": 30,
+    "adx_period": 14,
+    "adx_threshold": 20,
+    "adx_floor": 15,
+    "signal_scoring": {
+      "enabled": true,
+      "min_score": 70
+    },
+    "atr_sizing": {
+      "enabled": true,
+      "atr_period": 14,
+      "stop_mult": 2.5,
+      "tp1_mult": 1.4,
+      "tp2_mult": 2.8,
+      "tp3_mult": 4.2,
+      "min_sl_pct": 1.2,
+      "max_sl_pct": 3.0
+    },
+    "poll_interval": 5
+  }
+}
