@@ -16,7 +16,8 @@
       "ORCL/USDT:USDT",
       "ADBE/USDT:USDT",
       "PLTR/USDT:USDT",
-      "SPY/USDT:USDT"
+      "SPY/USDT:USDT",
+      "MRVL/USDT:USDT"
     ],
     "leverage": 5,
     "per_symbol_leverage": {
@@ -69,7 +70,8 @@
       "vol_ratio_threshold": 3.0,
       "tp_r_multiple": 1.5,
       "sl_atr_multiple": 2.5,
-      "mid_trade_widen": true
+      "mid_trade_widen": true,
+      "block_vol_ratio_threshold": 50.0
     },
     "market_open_blackout": {
       "enabled": true,

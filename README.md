@@ -1,13 +1,13 @@
 # AiBot · 量化 Bot 开发教学版骨架
 
 > 跟着公众号「**骑猪打怪兽随笔**」连载《从0搭Bot》配套的代码骨架。
-> 已更新至 **第 8 讲**（回测与实盘的鸿沟）。
+> 配套《从0搭Bot》连载：第 1 讲已发布（认识 bot 骨架），后续每周六更新；本仓库覆盖第 1~10 讲教学代码。
 
 ## 这是什么
 
 一个 5 分钟短线（5m）美股永续合约 bot 的**教学版骨架**，在 **demo 模拟盘**上运行：
 
-- 8 个标的：NVDA / MSFT / GOOGL / TSLA / ORCL / ADBE / PLTR / SPY
+- 9 个标的：NVDA / MSFT / GOOGL / TSLA / ORCL / ADBE / PLTR / SPY / MRVL
 - 核心机制（与连载各讲一一对应）：
   - 第2讲 行情源：ccxt `fetch_ohlcv` 拉 K 线
   - 第3讲 EMA50 方向闸门：顺趋势才给分
@@ -32,7 +32,7 @@ AiBot/
 1. 复制 `config.example.json` → `config.json`，填入你自己的 **demo** 盘 API key（testnet=true）；
 2. 安装依赖：`pip install ccxt`；
 3. 运行：`python bot.py`；
-4. 看启动日志：会先打印「启动核验」，随后列出 8 个标的的「等待信号」。
+4. 看启动日志：会先打印「启动核验」，随后列出 9 个标的的「等待信号」。
 
 > 只在 demo 盘跑！参数仅供学习，不是投资建议。
 
